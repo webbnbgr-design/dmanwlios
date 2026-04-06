@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Δημοσθένης Μανωλιός - Λογιστικό & Φοροτεχνικό Γραφείο</title>
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a', // Deep Slate
+                        accent: '#2563eb',  // Steel Blue
+                        accentLight: '#3b82f6',
+                    },
+                    borderRadius: {
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e7a7?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-8">
+        <div class="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex items-center justify-between shadow-lg border border-white/20">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl">Δ</div>
+                <span class="hidden sm:block font-bold text-lg tracking-tight">Δ. Μανωλιός</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#services" class="hover:text-accent transition-colors">Υπηρεσίες</a>
+                <a href="#about" class="hover:text-accent transition-colors">Το Γραφείο</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Επικοινωνία</a>
+            </div>
+
+            <a href="tel:2106982200" class="bg-accent hover:bg-accentLight text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span class="hidden xs:inline">210 6982200</span>
+                <span class="xs:hidden">Κλήση</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 text-accent-light mb-6 backdrop-blur-sm">
+                    <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                    <span class="text-sm font-semibold tracking-wide uppercase text-white">Εμπειρία & Αξιοπιστία</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
+                    Έγκυρες Λογιστικές & <br>
+                    <span class="text-accent">Φοροτεχνικές</span> Υπηρεσίες
+                </h1>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+                    Ολοκληρωμένη υποστήριξη για επιχειρήσεις και ιδιώτες. Με συνέπεια, επαγγελματισμό και βαθιά γνώση της νομοθεσίας, εξασφαλίζουμε την οικονομική σας ηρεμία.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:2106982200" class="bg-accent hover:bg-accentLight text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-accent/40 flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Καλέστε μας τώρα
+                    </a>
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-full text-lg font-bold transition-all flex items-center justify-center">
+                        Οι Υπηρεσίες μας
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute bottom-0 right-0 w-1/3 h-1/2 bg-accent/10 blur-[120px] rounded-full -mb-20 -mr-20"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Εξειδίκευση</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-primary mb-6">Ολοκληρωμένες Λύσεις</h3>
+                <p class="text-slate-600 text-lg">
+                    Παρέχουμε ένα ευρύ φάσμα υπηρεσιών προσαρμοσμένο στις ανάγκες κάθε πελάτη, από την απλή φορολογική δήλωση έως τον στρατηγικό σχεδιασμό επιχειρήσεων.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Card 1 -->
+                <div class="bento-card bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Φορολογικές Δηλώσεις</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Σύνταξη και υποβολή δηλώσεων εισοδήματος (Ε1, Ε2, Ε9) με απόλυτη ακρίβεια και αξιοποίηση όλων των φορολογικών ελαφρύνσεων.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bento-card bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Τήρηση Βιβλίων</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Πλήρης λογιστική παρακολούθηση επιχειρήσεων όλων των κατηγοριών (απλογραφικά & διπλογραφικά βιβλία) και συμμόρφωση με τα ΕΛΠ.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bento-card bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Μισθοδοσία</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Διαχείριση εργασιακών θεμάτων, υπολογισμός μισθοδοσίας, υποβολή ΑΠΔ και πλήρης υποστήριξη σε θέματα ΕΡΓΑΝΗ.
+                    </p>
+                </div>
+
+                <!-- Card 4 (Wide) -->
+                <div class="bento-card md:col-span-2 bg-primary p-8 rounded-3xl shadow-lg flex flex-col md:flex-row items-center gap-8 text-white overflow-hidden relative">
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 text-accent-light rounded-2xl flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        </div>
+                        <h4 class="text-3xl font-bold mb-4">Φορολογικός Σχεδιασμός</h4>
+                        <p class="text-slate-300 text-lg leading-relaxed max-w-xl">
+                            Στρατηγική καθοδήγηση για τη βελτιστοποίηση της φορολογικής επιβάρυνσης της επιχείρησής σας, πάντα εντός του νομικού πλαισίου.
+                        </p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 blur-[80px] rounded-full -mt-20 -mr-20"></div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bento-card bg-accent p-8 rounded-3xl shadow-lg text-white flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4">Συμβουλευτική</h4>
+                        <p class="text-white/80 leading-relaxed">
+                            Υποστήριξη σε ενάρξεις, μεταβολές και διακοπές επιχειρήσεων, καθώς και συμβουλές για επιδοτούμενα προγράμματα.
+                        </p>
+                    </div>
+                    <a href="tel:2106982200" class="mt-8 inline-flex items-center gap-2 font-bold hover:underline">
+                        Μάθετε περισσότερα
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <div class="relative z-10 rounded-4xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2022&auto=format&fit=crop" alt="Office" class="w-full h-auto" referrerPolicy="no-referrer">
+                    </div>
+                    <!-- Decorative background shapes -->
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl"></div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Το Γραφείο</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Ο Συνεργάτης που <br>Μπορείτε να Εμπιστευτείτε</h3>
+                    <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+                        <p>
+                            Το λογιστικό γραφείο του <strong>Δημοσθένη Μανωλιού</strong> λειτουργεί με γνώμονα την παροχή υπηρεσιών υψηλής ποιότητας. Κατανοούμε ότι κάθε οικονομική οντότητα είναι μοναδική και απαιτεί εξατομικευμένη προσέγγιση.
+                        </p>
+                        <p>
+                            Με πολυετή εμπειρία στον χώρο των Αθηνών, έχουμε χτίσει σχέσεις εμπιστοσύνης με εκατοντάδες επαγγελματίες και ιδιώτες. Η φιλοσοφία μας βασίζεται στην <strong>αμεσότητα</strong>, την <strong>ειλικρίνεια</strong> και την <strong>αποτελεσματικότητα</strong>.
+                        </p>
+                        <ul class="space-y-4 pt-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-accent/10 text-accent rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <span class="font-semibold text-primary">Συνεχής ενημέρωση για τις αλλαγές στη νομοθεσία</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-accent/10 text-accent rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <span class="font-semibold text-primary">Απόλυτη εχεμύθεια και προστασία δεδομένων</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-accent/10 text-accent rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <span class="font-semibold text-primary">Σύγχρονα ψηφιακά εργαλεία (myDATA κ.α.)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Info -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Επικοινωνία</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold mb-10 leading-tight">Είμαστε στη διάθεσή σας</h3>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Διεύθυνση</h4>
+                                <p class="text-slate-400 text-lg">Ιτέας 18 & Καρύστου, Αμπελόκηποι, Αθήνα<br>Τ.Κ. 115 23</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Τηλέφωνα</h4>
+                                <div class="flex flex-col gap-2">
+                                    <a href="tel:2106982200" class="text-accent-light text-2xl font-bold hover:text-white transition-colors">210 6982200</a>
+                                    <a href="tel:2107717508" class="text-accent-light text-2xl font-bold hover:text-white transition-colors">210 7717508</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6">
+                            <a href="tel:2106982200" class="inline-block bg-white text-primary px-10 py-4 rounded-full text-lg font-bold hover:bg-accent hover:text-white transition-all shadow-xl">
+                                Καλέστε μας για ραντεβού
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="lg:w-1/2">
+                    <div class="w-full h-[450px] rounded-4xl overflow-hidden shadow-2xl border-4 border-white/10">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.536345638217!2d23.76343537637841!3d37.98801497193233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a197e384897f7f%3A0x67677943f65651c5!2sIteas%2018%2C%20Athina%20115%2023!5e0!3m2!1sen!2sgr!4v1712415000000!5m2!1sen!2sgr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-950 text-slate-500 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm">Δ</div>
+                    <span class="font-bold text-white tracking-tight">Δημοσθένης Μανωλιός</span>
+                </div>
+                
+                <div class="text-sm text-center md:text-right">
+                    <p>&copy; 2024 Δημοσθένης Μανωλιός. Με επιφύλαξη παντός δικαιώματος.</p>
+                    <p class="mt-1">Λογιστικό & Φοροτεχνικό Γραφείο - Αμπελόκηποι, Αθήνα</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
